@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Bucket {% block title %}{% endblock %}</title>
+    
+</head>
+<body style="background-color: peachpuff;">
+    {% include 'pollingproject/nav.html'%}
+    <div style="border:20px outset black;background-color: yellow; width: 40%; padding: 60px; margin-top:10%; margin-left: 30%; height:fit-content; text-align: center;" >
+    <h1>Hey User! Welcome to your Poll page</h1>
+    <h5 style="color:green;"> Ready to visit!!...</h5>
+    <a class="btn btn-dark" href="{% url 'polls:index' %}">See Your Polls</a>
+    </div>
+</body>
+</html>
