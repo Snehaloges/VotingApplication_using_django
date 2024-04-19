@@ -1,0 +1,71 @@
+
+<br>
+<br>
+{% block title %}<h1 style="text-align: center;">LOGIN</h1>{% endblock %}
+{% block content %}
+
+<br>
+<div class="container-fluid "  style="border:20px outset black;background-color: yellow; width: 40%; padding: 60px; margin-top:3%; margin-left: 25%; height:fit-content; text-align: center;">
+  <div class="row as-full d-flex justify-content-center">
+    <div class="col-5 align-self-center">
+      <div class="card">
+        <div class="card-body">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-danger d-flex justify-content-center" role="alert">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+          <h2 class="card-title d-flex justify-content-center">User Login</h2>
+          <form action="." method="POST">
+            {% csrf_token %}
+              <div class="form-group">
+                <h4 for="id_username">Username:</h4>
+                <input type="text" name="username" class="form-control" id="id_username" required><i
+                  class="iconinput fa fa-user"></i>
+              </div>
+              <div class="form-group">
+                <h4 for="id_password">Password:</h4>
+                <input type="password" name="password" class="form-control" id="id_password" required><i
+                  class="iconinput fa fa-keyboard"></i>
+              </div>
+              <br>
+              <div>
+            <button type="submit" class="col-md-12 btn btn-secondary">Login</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  body {
+    background: linear-gradient(45deg, #b57bee, #00e3fd);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .as-full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-control {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .iconinput {
+    position: relative;
+    z-index: 1;
+    left: 10px;
+    top: -31px;
+    width: 0;
+  }
+</style>
+
+{% endblock %}
