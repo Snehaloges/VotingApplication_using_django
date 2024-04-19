@@ -1,0 +1,39 @@
+
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: palevioletred;
+}
+
+h1 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color:lightcoral
+}
+
+.btn-dark {
+    background-color: #343a40;
+}
+
+.btn:hover {
+    background-color: lightcoral
+}
+
+.btn-dark:hover {
+    background-color: #23272b;
+}
