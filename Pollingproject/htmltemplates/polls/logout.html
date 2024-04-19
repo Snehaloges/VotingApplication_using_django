@@ -1,0 +1,11 @@
+{% extends"base.html" %}
+{% block title %}<h1 style="text-align: center;">LOGout</h1>{% endblock %}
+{% block content %}
+{% if user.is_authentictaed %}
+hlo{{user.username}}!
+
+
+<form action="{% url 'polls:logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
